@@ -10,7 +10,18 @@
  
  [inputCsv]は編集されるCSVファイルのパスを示している。このクラスでは、インスタンスを生成したのみでは編集をしない。以下のメンバ変数・メンバ変数を参考にしてほしい。
  
- ## メンバ変数
+ ## メンバ
+ ### publicな関数
+ ・*void ave(void)*
+ 
+  &emsp; _csvRgbに格納されている画素地の平均値を取って_csvGrayに格納する関数。返り値はなし。
+  
+  ・*void threshold([thesholdTable], [isRGB])*
+   
+   &emsp;_csvRgbに格納されている画素地をthresholdingTableに指定された[threshold_table.csv](https://github.com/mimuro-lab/EditImage/blob/master/EditImage/threshold_table.csv)を参考に閾値で分ける。
+   isRgbをfalseにした場合、indexの40倍の値が_csvGrayに格納される。isRgbをtrueにした場合、表のr/g/bの値が格納される。
+   
+ 
  #### publicな変数
  ・*inputCsvFile*
  
@@ -48,16 +59,6 @@
  
    &emsp;string型の変数。stackが型で宣言されており、ave()やthreshold()などを実行した履歴をほ存する。
  
- ### publicな関数
- ・*void ave(void)*
- 
-  &emsp; _csvRgbに格納されている画素地の平均値を取って_csvGrayに格納する関数。返り値はなし。
-  
-  ・*void threshold([thesholdTable], [isRGB])*
-   
-   &emsp;_csvRgbに格納されている画素地をthresholdingTableに指定された[threshold_table.csv](https://github.com/mimuro-lab/EditImage/blob/master/EditImage/threshold_table.csv)を参考に閾値で分ける。
-   isRgbをfalseにした場合、indexの40倍の値が_csvGrayに格納される。isRgbをtrueにした場合、表のr/g/bの値が格納される。
-   
  ### privateな関数
  
  ・*vector<string>split([string], [splitChar])*
