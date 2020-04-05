@@ -35,7 +35,7 @@ public:
 	void ave();
 	//_csvGrayの更新（thresholdTableの閾値で分ける）isRgbは色付けをするかどうか
 	void threshold(string thresholdTable, bool isRgb);
-	//GrayscaleでCSVファイルを作成する isRgbは色付けをするかどうか
+	//GrayscaleでCSVファイルを作成する isRgbがtrueの場合_csvRgb、falseの場合_csvGrayを書き込む。
 	void writeCsv(string outputCsvfile, bool isRgb);
 	//graycaleの要素をint形式で管理（2次元vector）
 	vector<vector<int>> _csvGray;

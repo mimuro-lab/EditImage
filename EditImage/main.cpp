@@ -22,14 +22,20 @@ int main(int argc, char* argv[])
 	
 	//EditCsvクラスを用いてRGB形式の画素地からGrayscale形式へ変換する。
 	shared_ptr<EditCsv> editedCsv = make_shared<EditCsv>(outputCsv);
+
+	//画素地の平均値を取り、_csvGrayを更新する。
+	bool isRgb = false;
 	editedCsv->ave();
-	editedCsv->writeCsv(outputCsv, false);
-	editedCsv->threshold("threshold_table.csv", true);
-	editedCsv->writeCsv(outputCsv, true);
+	editedCsv->writeCsv(outputCsv, isRgb);
+
+	//閾値で分けて、Grayを割り当てる。_csvGrayを更新する。
+	isRgb = false;
+	editedCsv->threshold("threshold_table.csv", isRgb);
+ 	editedCsv->writeCsv(outputCsv, isRgb);
 	
 	//Csv2Imageクラスを用いてCSVファイルを画像に変換する。
 	shared_ptr<Csv2Image> Csv = make_shared<Csv2Image>(editedCsv->outputCsvFile, outputImagePath);
-	Csv->makeImage(true);
+	Csv->makeImage(isRgb);
 	Csv->deleteCsv(true);
 	
 }
