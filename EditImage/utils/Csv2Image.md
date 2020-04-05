@@ -1,9 +1,9 @@
 # class Csv2Image
 
-##　目的
+## 目的
 　このクラスは[Image2Csvクラス](https://github.com/mimuro-lab/EditImage/blob/master/EditImage/utils/Image2Csv.md)や[EditCsvクラス](https://github.com/mimuro-lab/EditImage/blob/master/EditImage/utils/EditCsv.md)で作成されたCSV形式のファイルを画像にする為に作られたクラスである。
  
-##　説明
+## 説明
 まず、インスタンス生成時には以下のように記述する。
 
 `shared_ptr<Csv2Image> csv2im = make_shared<Csv2Image>([csvFile], [imageFile]);`
