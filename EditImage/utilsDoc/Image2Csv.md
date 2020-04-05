@@ -11,6 +11,7 @@
  このクラスはインスタンス生成時に画像ファイルをCSVファイルへ変換する。
  
 ## メンバ
- *outputFilePath*
+### publicな変数
+・ *outputFilePath*
  
    string型の変数。出力先のCSVファイルのパスが格納されている。
