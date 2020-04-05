@@ -13,4 +13,4 @@
 ## メンバ
  *outputFilePath*
  
-     string型の変数。出力先のCSVファイルのパスが格納されている。
+   string型の変数。出力先のCSVファイルのパスが格納されている。
