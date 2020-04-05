@@ -22,7 +22,7 @@
    isRgbをfalseにした場合、indexの40倍の値が_csvGrayに格納される。isRgbをtrueにした場合、表のr/g/bの値が格納される。
    
  
- #### publicな変数
+ ### publicな変数
  ・*inputCsvFile*
  
  &emsp;編集されるCSVファイルのパス。string型の変数である。
