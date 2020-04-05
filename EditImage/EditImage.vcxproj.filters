@@ -30,7 +30,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="threshold_table.csv" />
-    <None Include="lena.csv" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="lena.png">

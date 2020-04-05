@@ -26,6 +26,8 @@ EditCsv::EditCsv(string _inputCsvFile)
 {
 	printf("\tedting a CSV(image)...\n");
 
+	_csvRgb.clear();
+	_csvGray.clear();
 	inputCsvFile = _inputCsvFile;
 	std::fstream inputCsv(_inputCsvFile);
 	if (!inputCsv) {

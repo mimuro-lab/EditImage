@@ -2,7 +2,6 @@
 
 Image2Csv::Image2Csv(string _inputImage, string _outputFilePath)
 {
-	string s = _inputImage;
 	cv::Mat _imageSrc = cv::imread(_inputImage);
 	
 	outputFilePath = _outputFilePath;
