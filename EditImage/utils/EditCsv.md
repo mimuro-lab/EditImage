@@ -13,13 +13,17 @@
  ## メンバ変数
  #### publicな変数
  ・*inputCsvFile*
+ 
  &emsp;編集されるCSVファイルのパス。string型の変数である。
  ・*outputCsvFile*
+ 
  &emsp;出力されるCSVファイルのパス。string型の変数であり、メンバ関数writeCsv()を実行した時に更新される。一番最近のパスしか保持しない事に注意。
  ・*_csvGray*
+ 
  &emsp;メンバ関数ave()やthreshold()で編集されたグレースケール形式の画素地を格納するための変数。Vectorで宣言された２次元変数であり、各要素はint形式である。
  
 ・*_csvRgb*
+
  &emsp;メンバ関数threshold()で編集されたRGB形式の画素地を格納するための変数。Vectorで宣言された２次元変数であり、各要素はstring形式である。
  各要素は、編集後のCSVのような形で以下のようになっている。
  
