@@ -1,4 +1,5 @@
 # class Csv2Image
+
 ##　目的
 　このクラスは[Image2Csvクラス](https://github.com/mimuro-lab/EditImage/blob/master/EditImage/utils/Image2Csv.md)や[EditCsvクラス](https://github.com/mimuro-lab/EditImage/blob/master/EditImage/utils/EditCsv.md)で作成されたCSV形式のファイルを画像にする為に作られたクラスである。
  
