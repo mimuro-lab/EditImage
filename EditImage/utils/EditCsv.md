@@ -57,3 +57,9 @@
    
    &emsp;_csvRgbに格納されている画素地をthresholdingTableに指定された[threshold_table.csv](https://github.com/mimuro-lab/EditImage/blob/master/EditImage/threshold_table.csv)を参考に閾値で分ける。
    isRgbをfalseにした場合、indexの40倍の値が_csvGrayに格納される。isRgbをtrueにした場合、表のr/g/bの値が格納される。
+   
+ ### privateな関数
+ 
+ ・*vector<string>split([string], [splitChar])*
+ 
+ &emsp;文字列[string]を文字[splitChar]で区切る。区切った各要素をvector形式にして返す。
