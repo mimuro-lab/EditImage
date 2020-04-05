@@ -1,17 +1,17 @@
-#class EditCsv
-#目的
+# class EditCsv
+# 目的
 　このクラスは[Image2Csvクラス](https://github.com/mimuro-lab/EditImage/blob/master/EditImage/utils/Image2Csv.md)から生成された画像の画素地を示すCSVファイルを編集する為に作られたものである。
  また、このクラスではあらかじめ[threshold_table.csv](https://github.com/mimuro-lab/EditImage/blob/master/EditImage/threshold_table.csv)の様なファイルを用意する必要がある。
  
- #説明
+ # 説明
  まず、インスタンス生成時は以下のように記述する。
  
  `shared_ptr<EditCsv> editCsv = make_shared<EditCsv>([inputCsv]);`
  
  [inputCsv]は編集されるCSVファイルのパスを示している。このクラスでは、インスタンスを生成したのみでは編集をしない。以下のメンバ変数・メンバ変数を参考にしてほしい。
  
- ##メンバ変数
- ####publicな変数
+ ## メンバ変数
+ #### publicな変数
  ・*inputCsvFile*
  &emsp;編集されるCSVファイルのパス。string型の変数である。
  ・*outputCsvFile*
