@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
 	editedCsv->writeCsv(outputCsv, isRgb);
 
 	//閾値で分けて、Grayを割り当てる。_csvGrayを更新する。
-	isRgb = false;
+	isRgb = true;
 	editedCsv->threshold("threshold_table.csv", isRgb);
  	editedCsv->writeCsv(outputCsv, isRgb);
 	
