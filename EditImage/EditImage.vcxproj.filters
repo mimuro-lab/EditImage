@@ -32,11 +32,6 @@
     <None Include="threshold_table.csv" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="lena.png">
-      <Filter>リソース ファイル</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="utils\Image2Csv.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
