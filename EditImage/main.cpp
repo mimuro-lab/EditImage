@@ -10,20 +10,16 @@ using namespace std;
 int main(int argc, char* argv[])
 {
 	//画像パスが入力されなかったら強制終了
-	if (!(argc == 2 || argc == 1))	return 0;
-	string csvPath = argv[1];//入力CSVファイル名
+	if (argc == 1)	return 0;
+	string imagePath = argv[1];//入力画像ファイル名
+	string outputCsv = argv[1];//出力CSVファイル名
+	outputCsv = outputCsv.replace(outputCsv.end() - 4, outputCsv.end(), ".csv");
 	string outputImagePath = argv[1];//出力画像ファイル名
-	outputImagePath = outputImagePath.replace(outputImagePath.end() - 4, outputImagePath.end(), ".png");
-	bool isRgb;
-	if (atoi(argv[2]) == 0)
-		isRgb = false;
-	else if (atoi(argv[2]) == 1)
-		isRgb = true;
+	outputImagePath = outputImagePath.insert(outputImagePath.length() - 4, "_result");
 
-	/*
 	//Image2Csvクラスを用いて画像から画素地をRGB形式のCSVファイルへ変換する。
 	shared_ptr<Image2Csv> image = make_shared<Image2Csv>(imagePath, outputCsv);
-	
+
 	//EditCsvクラスを用いてRGB形式の画素地からGrayscale形式へ変換する。
 	shared_ptr<EditCsv> editedCsv = make_shared<EditCsv>(outputCsv);
 
@@ -35,11 +31,11 @@ int main(int argc, char* argv[])
 	//閾値で分けて、Grayを割り当てる。_csvGrayを更新する。
 	isRgb = true;
 	editedCsv->threshold("threshold_table.csv", isRgb);
- 	editedCsv->writeCsv(outputCsv, isRgb);
-	*/
+	editedCsv->writeCsv(outputCsv, isRgb);
+
 	//Csv2Imageクラスを用いてCSVファイルを画像に変換する。
-	shared_ptr<Csv2Image> Csv = make_shared<Csv2Image>(csvPath, outputImagePath);
+	shared_ptr<Csv2Image> Csv = make_shared<Csv2Image>(editedCsv->outputCsvFile, outputImagePath);
 	Csv->makeImage(isRgb);
-	//Csv->deleteCsv(true);
-	
+	Csv->deleteCsv(true);
+
 }
