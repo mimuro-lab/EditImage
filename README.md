@@ -1,8 +1,8 @@
 # EditImage
 画像を編集するために作成したプログラムである。また、画像から画素地をCSVファイルに変換したり、そのファイルを編集したり、CSVファイルから画像を生成することができる。
-実行ファイル類は以下に置いておく。
+詳細はWikiを参照してもらいたい。
 
-[https://github.com/mimuro-lab/EditImage/tree/master/x64/Debug](https://github.com/mimuro-lab/EditImage/tree/master/x64/Debug)
+[https://github.com/mimuro-lab/EditImage/wiki](https://github.com/mimuro-lab/EditImage/wiki)
 
 また、releaseで実行ファイルを作成してない（私はできない）。理由は以下を参考にしてほしい。
 
